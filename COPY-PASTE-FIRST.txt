@@ -1,0 +1,40 @@
+NOIRÉ | Windows copy-paste update
+
+1. Stop the old NOIRÉ terminals with Ctrl+C.
+2. Extract this ZIP. Open its noire-restaurant folder and copy its contents
+   into your existing noire-restaurant folder (the one with node_modules).
+   Choose Replace when Windows asks. Do not create a second nested folder.
+   The ZIP contains no .env, so your existing MongoDB URI and credentials stay.
+3. Start your MongoDB service if you use a local database.
+4. Double-click START-NOIRE.bat or run npm start in the project root.
+   Open http://localhost:4000/ (or use your configured PORT).
+   The built frontend is included. No npm install or npm run build is needed
+   when the original project dependencies are present.
+5. The public menu includes a built-in fast-food collection when the database
+   has no imported fast-food dishes. To manage those dishes in Admin, run
+   ADD-FAST-FOOD.bat once, or run this from the project root:
+       npm run seed -w server -- --fast-food-only
+   Matching items retain their existing data. If your demo database also has no
+   tables, run npm run seed -w server -- --catalog-only instead.
+   To create a missing staff account, configure ADMIN_EMAIL and ADMIN_PASSWORD
+   in .env and use the regular npm run seed command.
+
+Development mode remains available with npm run dev at http://localhost:5173.
+Use one mode at a time. Keep your root .env or server/.env with the existing
+MONGODB_URI and JWT_SECRET. Root values take priority when both files exist.
+
+Quick check: Home > Menu > Reservations without a reload. Choose tomorrow,
+19:00 and 2 guests. An active table with sufficient capacity and no overlapping
+reservation will appear. The sample inventory seats up to 10 at a single table.
+
+Intro check: Open the URL as a new navigation. The 3D scene plays once before
+the page renders. Reloading and navigating inside the site skip the intro.
+Use the Enter restaurant button to skip it. With reduced motion enabled,
+the homepage opens directly. Browsers without WebGL use a lighter intro.
+
+Food imagery consists of illustrative food visuals. Some variants in the
+same category share a representative image. Edit dishes and prices in Admin.
+
+Mehndi deal packages and prices are sample content in client/src/hospitality.jsx.
+They link to the contact page for enquiries. The Home and Reservations videos
+animate generated stills and use posters when reduced motion is enabled.

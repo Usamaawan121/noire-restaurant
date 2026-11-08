@@ -1,0 +1,1 @@
+{"name":"server","type":"module","scripts":{"dev":"node --watch index.js","start":"node index.js","seed":"node seed.js"},"dependencies":{"express":"^5.1.0","mongoose":"^8.19.0","jsonwebtoken":"^9.0.2","bcrypt":"^6.0.0","nodemailer":"^7.0.0","dotenv":"^16.6.0","zod":"^3.25.0","helmet":"^8.0.0","cors":"^2.8.5","express-rate-limit":"^8.0.0","luxon":"^3.7.0"}}
